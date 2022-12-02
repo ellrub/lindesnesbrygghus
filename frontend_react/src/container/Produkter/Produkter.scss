@@ -1,4 +1,4 @@
-.app__about {
+.app__produkter {
     flex: 1;
     width: 100%;
     flex-direction: column;
@@ -45,14 +45,14 @@
     }
 }
 
-.app__about-item-h2 {
+.app__produkter-item-h2 {
     font-size: 1.1rem;
     color: var(--light-blue);
     letter-spacing: 0.03rem;
     font-weight: 500;
 }
 
-.app__about-item-p {
+.app__produkter-item-p {
     font-size: 0.9rem;
     color: var(--light-color);
     line-height: 1.0rem;

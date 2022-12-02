@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
-import {SocialMedia} from "../../components"
+import React, { useState } from 'react'
+import { SocialMedia } from "../../components"
 
-import {images} from "../../constants"
-import {AppWrap, MotionWrap} from "../../wrapper"
-import {client} from "../../client"
+import { images } from "../../constants"
+import { AppWrap, MotionWrap } from "../../wrapper"
+import { client } from "../../client"
 import "./Footer.scss";
 
 const Footer = () => {
@@ -23,14 +23,14 @@ const handleChangeInput = (e) => {
 const handleSubmit = () => {
     setLoading(true);
 
-    const contact = {
-        _type: "contact",
+    const kontakt = {
+        _type: "kontakt",
         name: name,
         email: email,
         message: message
     }
 
-    client.create(contact)
+    client.create(kontakt)
         .then(() => {
             setLoading(false);
             setIsFormSubmitted(true);
@@ -39,7 +39,7 @@ const handleSubmit = () => {
 
     return (
     <>
-        <h2 className='app__headline-text'>I would love to work with you</h2>
+        <h2 className='app__headline-text'>Kontakt Oss</h2>
         <div className='app__footer-cards'>
             <div className='app__footer-card'> 
                 <img src={images.email} alt="email" />
@@ -50,52 +50,6 @@ const handleSubmit = () => {
                 <a href="tel: +47 478 24 478" className='p-text'>+47 478 24 478</a>
             </div>
         </div>
-
-    {!isFormSubmitted ? 
-        <form className='app__footer-form app__flex'>
-            <div className='app__flex app__footer--inputs'>
-                <input
-                    required
-                    className='p-text app__footer--input' 
-                    type="text"  
-                    name='name' 
-                    value={name} 
-                    id="name"
-                    onChange={handleChangeInput}/>
-                <label htmlFor='name' className='app__footer--label'>Your Name</label>
-
-            </div>
-            <div className='app__flex app__footer--inputs'>
-                <input
-                    required
-                    className='p-text app__footer--input' 
-                    type="text" 
-                    name='email' 
-                    value={email} 
-                    id="email"
-                    onChange={handleChangeInput}/>
-                <label htmlFor='email' className='app__footer--label'>Your Email</label>
-            </div>
-            <div className='app__footer--inputs'>
-                <textarea
-                    required
-                    className='p-text app__footer--input' 
-                    value={message}
-                    name="message"
-                    id="message"
-                    onChange={handleChangeInput}
-                />
-                <label htmlFor='message' className='app__footer--label'>Your Message</label>
-            </div>
-            <button 
-                type="button" 
-                className='p-text' 
-                onClick={handleSubmit}
-            >{loading ? "Sending" : "Send Message"}</button>
-        </form>
-        : <div>
-            <h3 className='app__footer-sub'>Thank you for getting in touch</h3>
-        </div>}
         <SocialMedia />
     </>
 )
@@ -103,7 +57,7 @@ const handleSubmit = () => {
 
 export default AppWrap (
     MotionWrap(Footer, "app__footer"),
-    "contact",
+    "kontakt",
     "app__whitebg"
 )
 

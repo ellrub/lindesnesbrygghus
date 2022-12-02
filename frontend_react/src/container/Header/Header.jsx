@@ -1,68 +1,37 @@
 import React from 'react'
-import {motion} from "framer-motion"
-import {AppWrap} from "../../wrapper"
+import { motion } from "framer-motion"
+import { AppWrap } from "../../wrapper"
 
-import {images} from "../../constants"
+import { images } from "../../constants"
 import "./Header.scss";
-
-const scaleVariant = {
-    whileInView: {
-        scale: [0, 1],
-        opacity: [0, 1],
-        transition: {
-            duration: 1,
-            ease: "easeInOut"
-        }
-    }
-}
 
 const Header = () => {
     return (
     <div className='app__header app__flex'>
-        <motion.div
-            whileInView={{x: [-100, 0], opacity: [0, 1]}}
-            transition={{duration: 0.5}}
-            className="app__header-info"
+        <video 
+            autoPlay="autopaly" 
+            loop="loop" 
+            muted 
+            width="100%"
+            >
+            <source src={images.beer} type="video/mp4" />
+            Your browser does not support HTML5 videos.
+        </video>
+        <motion.h1
+        whileInView={{y: [180, 0], opacity: [0, 1]}}
+        transition={{duration: 0.8}}
         >
-            <div className='app__header-badge'>
-                <div className='badge-cmp app__flex'>
-                    <div style={{maringLeft: 20}}>
-                        <p className='app__header-text'>Hey, my name is</p>
-                        <h1 className='app__header-name'>Ruben</h1>
-                        <p className='app__header-text'>I'm a construction engineer turned developer. 
-                                        <br/>I love making frontend websites and applications.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </motion.div>
-        <motion.div
-            whileInView={{opacity: [0, 1]}}
-            transition={{duration: 0.5, delayChildren: 0.5}}
-            className="app__header-img"
+            Når tiden skal nytes
+        </motion.h1>
+        <motion.p
+        whileInView={{y: [100, 0], opacity: [0, 1]}}
+        transition={{duration: 0.8}}
         >
-            <img src={images.profile} alt="profile_bg" />
-            <motion.img
-                whileInView={{scale: [0, 1]}}
-                transition={{duration: 1, ease: "easeInOut"}}
-                src={images.blob}
-                alt="profile_blob"
-                className='overlay_circle'
-            />
-        </motion.div>
-        <motion.div
-            variants={scaleVariant}
-            whileInView={scaleVariant.whileInView}
-            className="app__header-circles"
-        >
-            {[images.html, images.css, images.javascript, images.react].map((circle, index) => (
-                <div className='circle-cmp app__flex' key={`circle-${index}`}>
-                    <img src={circle} alt="circle" />
-                </div>
-            ))}
-        </motion.div>
+            Lidenskap, entusiasme og glede over godt øl er det som driver oss fremover og
+            vi tester hele tiden grenser for å skape nye smaker
+        </motion.p>
     </div>
 )
 }
 
-export default AppWrap(Header, "home");
+export default AppWrap(Header, "hjem");

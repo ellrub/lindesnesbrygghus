@@ -35,7 +35,7 @@ const Testimonial = () => {
     return (
         
     <>
-    <h2 className='app__headline-text'>Testimonials</h2>
+    <h2 className='app__headline-text'></h2>
         {testimonials.length && (
             <>
                 <div className='app__testimonial-item app__flex'>

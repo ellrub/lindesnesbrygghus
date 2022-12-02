@@ -6,11 +6,9 @@ import javascript from '../assets/javascript.png';
 import react from '../assets/react.png';
 import sass from '../assets/sass.png';
 
-import profile from '../assets/profile.png';
-import circle from '../assets/circle.svg';
-import blob from "../assets/overlay_blob.svg";
 
 import logo from "../assets/LB_logo.png"
+import beer from "../assets/beer.mp4"
 
 export default {
     email,
@@ -20,9 +18,7 @@ export default {
     javascript,
     react,
     sass,
-    profile,
-    circle,
-    blob,
 
-    logo
+    logo,
+    beer
 };
