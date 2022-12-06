@@ -9,11 +9,11 @@ const App = () => {
     <div className='app'>
         <Navbar />
         <Header />
-        <Produkter />
+        {/* <Produkter />
         <Work />
         <Skills />
         <Testimonial />
-        <Footer />
+        <Footer /> */}
     </div>
     );
 }

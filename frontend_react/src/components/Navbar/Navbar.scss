@@ -18,8 +18,13 @@
     justify-content: flex-start;
     align-items: center;
 
+    width: 80%;
+    max-height: 200px;
+    max-width: 600px;
+
     img {
-        width: 25%;
+        max-width: 30%;
+        max-height: 200px;
     }
 
     .app__navbar-logotext {
@@ -27,12 +32,14 @@
         p{
             text-transform: uppercase;
             font-family: var(--font-lindesnes);
-            font-size: 2rem;
+            font-size: 1.8rem;
             font-weight: 500;
-            line-height: 3rem;
-
-            
+            line-height: 2.3rem;            
         }
+    }
+
+    @media screen and (min-width: 900px) {
+        margin-left: 2rem;
     }
 
 }
@@ -96,12 +103,12 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: var(--secondarybg-color);
+    
 
     svg {
         width: 70%;
         height: 70%;
-        color: var(--light-color);
+        color: black;
         cursor: pointer;
     }
 

@@ -7,16 +7,16 @@ import "./Header.scss";
 
 const Header = () => {
     return (
-    <div className='app__header app__flex'>
+    <div className='app__header'>
         <video 
             autoPlay="autopaly" 
             loop="loop" 
             muted 
-            width="100%"
             >
             <source src={images.beer} type="video/mp4" />
             Your browser does not support HTML5 videos.
         </video>
+        <div className='test'>
         <motion.h1
         whileInView={{y: [180, 0], opacity: [0, 1]}}
         transition={{duration: 0.8}}
@@ -30,6 +30,8 @@ const Header = () => {
             Lidenskap, entusiasme og glede over godt øl er det som driver oss fremover og
             vi tester hele tiden grenser for å skape nye smaker
         </motion.p>
+        <a href="">Våre Produkter</a>
+        </div>
     </div>
 )
 }

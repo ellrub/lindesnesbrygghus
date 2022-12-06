@@ -21,7 +21,7 @@ const [toggle, setToggle] = useState(false)
             </div>
         </motion.div>
         <motion.ul 
-            whileInView={{y: [-100, 0], opacity: [0, 1]}}
+            whileInView={{y: [100, 0], opacity: [0, 1]}}
             transition={{duration: 0.8}}
             className='app__navbar-links'>
             {["hjem", "produkter", "artikler", "kontakt"].map((item) => (
