@@ -38,7 +38,7 @@ const Produkter = () => {
     }
     
     return (
-        <>
+        <div className='app__produkterr app__flex'>
             <h2 className='app__produkter-head'>Produkter</h2>
             <div className='app__produkter-filter'>
                 {["Juleøl", "Alle"].map((item, index) => (
@@ -54,8 +54,7 @@ const Produkter = () => {
             <motion.div
                 animate={animateCard}
                 transition={{duration: 0.5, delayChildren:0.5}}
-                className="app__produkter-portfolio"
-                // whileHover={{scale: 1.04}}
+                className="app__produkter-ol"
             >
                 {filterProdukter.map((produkter, index) => (
                     <div className='app__produkter-item app__flex' key={index}>
@@ -73,7 +72,7 @@ const Produkter = () => {
                     </div>
                 ))}
             </motion.div>
-        </>
+        </div>
 )}
 
 export default AppWrap(
