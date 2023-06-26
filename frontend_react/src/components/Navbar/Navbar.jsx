@@ -24,7 +24,7 @@ const [toggle, setToggle] = useState(false)
             whileInView={{y: [100, 0], opacity: [0, 1]}}
             transition={{duration: 0.8}}
             className='app__navbar-links'>
-            {["hjem", "produkter", "artikler", "kontakt"].map((item) => (
+            {["hjem", "produkter", "kontakt"].map((item) => (
                 <li className="app__flex p-text" key={`link-${item}`}>
                     <div />
                     <a href={`#${item}`}>{item}</a>
@@ -41,7 +41,7 @@ const [toggle, setToggle] = useState(false)
                 >
                     <HiX onClick={() => setToggle(false)} />
                     <ul>
-                        {["hjem", "produkter", "artikler", "kontakt"].map((item) => (
+                        {["hjem", "produkter", "kontakt"].map((item) => (
                         <li key={item}>
                             <a href={`#${item}`} onClick={() => setToggle(false)}>{item}</a>
                         </li>
